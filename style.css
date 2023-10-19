@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    position: fixed;
+    height: auto;
+    background-color: rgb(211, 0, 0);
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+main{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+
+main h2{
+    font-size: 28px;
+}
+
+#contain_events{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.event{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    height: auto;
+    align-items: center;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border: 5px solid red;
+    border-radius: 30px;
+}
+
+.contain_data{
+    padding: 30px 20px;
+}
+
+.contain_data h4{
+    font-size: 24px;
+}
+
+.contain_data button{
+    background-color: red;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 500ms;
+}
+
+.contain_data button:hover{
+    background-color: black;
+    color: white;
+}
+
+.contain_img{
+    height: 100%;
+    width: 100%;
+}
+
+.contain_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.characters{
+    grid-area: span 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.characters h2{
+    grid-area: span 1/ span 7;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0;
+}
+
+.characters .c_i_character{
+    width: 80px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 0, 0, 0);
+    border-radius: 15px;
+}
+
+.characters .c_i_character:hover{
+    border: 3px solid rgb(255, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+.c_i_character .img_contain{
+    height: 70%;
+}
+
+.img_contain img{
+    width: 100%;
+    height: 90%;
+}
+
+.c_i_character h4{
+    font-size: 14px;
+}
+
+h4{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+@media (max-width: 1700px) {
+    .characters{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .characters h2{
+        grid-area: span 1/ span 6;
+        
+    }
+}
+
+@media (max-width: 760px) {
+    .characters{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .characters h2{
+        grid-area: span 1/ span 5;
+}
+}
+
+@media (max-width: 1500px) {
+    .characters{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .characters h2{
+        grid-area: span 1/ span 6;
+    }
+}
+
+@media (max-width: 1200px) {
+    #contain_events{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .characters{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .characters h2{
+        grid-area: span 1/ span 5;
+    }
+}
+
+@media (max-width: 640px) {
+    .characters{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .event{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .characters h2{
+        grid-area: span 1/ span 4;
+    }
+}
+
+@media (max-width: 520px) {
+    .characters{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .characters h2{
+        grid-area: span 1/ span 3;
+    }
+}
+
+@media (max-width: 370px) {
+    .characters{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .characters h2{
+        grid-area: span 1/ span 2;
+    }
+}
+
